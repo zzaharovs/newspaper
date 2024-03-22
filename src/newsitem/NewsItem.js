@@ -1,5 +1,4 @@
 import style from './NewsItem.module.css'
-import {useState} from "react";
 
 export function NewsItem(props) {
     return (
