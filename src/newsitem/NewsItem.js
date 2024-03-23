@@ -1,6 +1,17 @@
 import style from './NewsItem.module.css'
 
 export function NewsItem(props) {
+
+    const scoreClassArr = [style.score]
+
+    if (props.score > 50) {
+        scoreClassArr.push(style.highScore)
+    } else if (props.score > 30) {
+        scoreClassArr.push(style.middleScore)
+    } else {
+        scoreClassArr.push(style.lowScore)
+    }
+
     return (
         <div className={style.container}>
             <a className={style.link} href={props.url}>{props.title}</a>
@@ -11,8 +22,8 @@ export function NewsItem(props) {
                     <span>{props.date}</span>
                 </div>
 
-                <div className={style.score}>
-                    {props.points} points  |
+                <div className={scoreClassArr.join(' ')}>
+                    {props.score} points
                 </div>
             </div>
         </div>
