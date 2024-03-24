@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/newspaper/static/css/main.d41081f0.css",
+    "main.js": "/newspaper/static/js/main.db972501.js",
+    "index.html": "/newspaper/index.html",
+    "main.d41081f0.css.map": "/newspaper/static/css/main.d41081f0.css.map",
+    "main.db972501.js.map": "/newspaper/static/js/main.db972501.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.d41081f0.css",
+    "static/js/main.db972501.js"
+  ]
+}
