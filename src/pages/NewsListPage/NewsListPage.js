@@ -2,7 +2,7 @@ import {useEffect, useState} from "react";
 import {get} from "../../api/Api";
 import {NewsItem} from "../../components/NewsItem/NewsItem";
 import {unixToDate} from "../../utils/utils";
-import styles from "./NewsList.module.css"
+import styles from "./NewsListPage.module.css"
 
 export function NewsList() {
 
@@ -30,7 +30,6 @@ export function NewsList() {
                         key={item.id}
                         id={item.id}
                         title={item.title}
-                        url={item.url}
                         username={item.by}
                         date={unixToDate(item.time)}
                         score={item.score}

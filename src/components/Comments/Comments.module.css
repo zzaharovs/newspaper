@@ -1,0 +1,46 @@
+.container {
+    padding: 20px;
+    border: 1px solid #3a3333;
+    border-radius: 10px;
+    overflow-wrap: break-word;
+}
+
+.commentContainer:not(:last-child){
+    margin-bottom: 10px;
+}
+
+.commentUsername{
+    font-weight: 600;
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+.commentText{
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+.commentTime{
+    font-size: 14px;
+    color: #918a8a;
+}
+
+.commentBottom{
+    display: flex;
+    justify-content: space-between;
+}
+
+.subComment{
+    margin-left: 30px;
+}
+
+
+.commentReplyButton{
+    background: none;
+    border: none;
+    color: #1818ce;
+}
+
+.commentReplyButton:hover{
+    color: #27276e;
+}

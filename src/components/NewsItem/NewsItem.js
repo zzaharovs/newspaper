@@ -1,9 +1,10 @@
 import style from './NewsItem.module.css'
 import {Link} from "react-router-dom";
+import {domainToHostName, openExternalUrl} from "../../utils/utils";
 
 export function NewsItem(props) {
 
-    const {className = '', title, username, date, score, id} = props
+    const {className = '', title, username, date, score, id, url} = props
     const scoreClassArr = [style.score]
 
     if (score > 50) {
@@ -23,9 +24,14 @@ export function NewsItem(props) {
                     <span>{date}</span>
                 </div>
 
-                <div className={scoreClassArr.join(' ')}>
-                    {score} points
-                </div>
+                {url ? (
+                    <div
+                        className={style.externalLink} onClick= {() => openExternalUrl(url)}>{domainToHostName(url)}</div>
+                ) : (
+                    <div className={scoreClassArr.join(' ')}>
+                        {score} points
+                    </div>
+                )}
             </div>
         </div>
     )
