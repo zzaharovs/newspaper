@@ -39,24 +39,24 @@
 }
 
 .lowScore{
-    color: #8a2222;
+    color: #f5a0a0;
     padding: 6px 12px;
     border-radius: 12px;
-    background-color: #000000;
+    background-color: #c71313;
 }
 
 .middleScore{
-    color: orange;
+    color: #e0abdf;
     padding: 6px 12px;
     border-radius: 12px;
-    background-color: #000000
+    background-color: #8f20a9
 }
 
 .highScore{
-    color: #32d332;
+    color: #4d8a4d;
     padding: 6px 12px;
     border-radius: 12px;
-    background-color: #000000;
+    background-color: #18e502;
 }
 
 .button {

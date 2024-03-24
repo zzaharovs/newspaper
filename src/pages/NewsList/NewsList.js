@@ -1,7 +1,8 @@
 import {useEffect, useState} from "react";
 import {get} from "../../api/Api";
-import {NewsItem} from "../../newsitem/NewsItem";
+import {NewsItem} from "../../components/NewsItem/NewsItem";
 import {unixToDate} from "../../utils/utils";
+import styles from "./NewsList.module.css"
 
 export function NewsList() {
 
@@ -25,7 +26,9 @@ export function NewsList() {
             {
                 news.map(item => {
                     return <NewsItem
+                        className={styles.newsItem}
                         key={item.id}
+                        id={item.id}
                         title={item.title}
                         url={item.url}
                         username={item.by}

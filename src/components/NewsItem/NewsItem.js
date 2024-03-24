@@ -1,29 +1,30 @@
 import style from './NewsItem.module.css'
+import {Link} from "react-router-dom";
 
 export function NewsItem(props) {
 
+    const {className = '', title, username, date, score, id} = props
     const scoreClassArr = [style.score]
 
-    if (props.score > 50) {
+    if (score > 50) {
         scoreClassArr.push(style.highScore)
-    } else if (props.score > 30) {
+    } else if (score > 30) {
         scoreClassArr.push(style.middleScore)
     } else {
         scoreClassArr.push(style.lowScore)
     }
 
     return (
-        <div className={style.container}>
-            <a className={style.link} href={props.url}>{props.title}</a>
-
+        <div className={`${style.container} ${className}`}>
+            <Link className={style.link} to={`comments/${id}`}> {title}</Link>
             <div className={style.info}>
                 <div className={style.userData}>
-                    <span>{props.username} | </span>
-                    <span>{props.date}</span>
+                    <span>{username} | </span>
+                    <span>{date}</span>
                 </div>
 
                 <div className={scoreClassArr.join(' ')}>
-                    {props.score} points
+                    {score} points
                 </div>
             </div>
         </div>
