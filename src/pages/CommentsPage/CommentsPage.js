@@ -1,4 +1,4 @@
-import {Link, useParams, useResolvedPath} from "react-router-dom";
+import {Link, useParams} from "react-router-dom";
 import {NewsItem} from "../../components/NewsItem/NewsItem";
 import {get} from "../../api/Api";
 import {HACKER_NEWS_GET_BY_ID} from "../../const/HackerNewsConst";
